@@ -30,13 +30,13 @@ type UpdateUserDetailsRequest struct {
 }
 
 type UpdateUserPasswordRequest struct {
-	// Email           string `json:"email"`
 	Password        string `json:"password"`
 	ConfirmPassword string `json:"confirmPassword"`
 }
 
 type PublicUser struct {
-	Email string `json:"email"`
+	Email           string `json:"email"`
+	Name string `json:"name"`
 	// Add other safe fields here if needed
 }
 
@@ -157,7 +157,8 @@ func GetMe(w http.ResponseWriter, r *http.Request) {
 	}
 
 	publicUser := PublicUser{
-		Email: user.Email,
+		Email: email,
+		Name: user.Name,
 	}
 
 	w.Header().Set("Content-Type", "application/json")

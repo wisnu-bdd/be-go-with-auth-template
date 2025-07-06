@@ -104,6 +104,7 @@ func UpdateUserByID(id string, updatedUser *models.User) error {
 		"$set": bson.M{
 			"email":     updatedUser.Email,
 			"password":  updatedUser.Password,
+			"name":			 updatedUser.Name,
 			"updatedAt": updatedUser.UpdatedAt,
 		},
 	}
@@ -132,6 +133,7 @@ func UpdateUserDetailsByEmail(email string, updatedUser *models.User) error {
 	update := bson.M{
 		"$set": bson.M{
 			"email":     updatedUser.Email,
+			"name":			 updatedUser.Name,
 			"updatedAt": updatedUser.UpdatedAt,
 		},
 	}

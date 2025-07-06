@@ -7,6 +7,6 @@ import (
 )
 
 func AccessCollection(collectionName string) *mongo.Collection {
-	collection := db.Client.Database("bdd-it-product-dev-guide").Collection(collectionName)
+	collection := db.Client.Database("<cluster-name>").Collection(collectionName)
 	return collection
 }
