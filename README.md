@@ -1,6 +1,6 @@
 # Backend Go With Auth Template
 
-A Go-based backend service template including JWT based authentication setup. This service provides authentication and metrics functionality through a RESTful API.
+A Go-based backend service template including JWT based authentication setup. This service provides authentication and (other future features) functionality through a RESTful API.
 
 ## Features
 
